@@ -44,7 +44,9 @@ main.cpp 已经完成了文件读取和答案输出功能，你需要完成lab1.
 - Button 是一个二维数组，记录开关的控制信息，其中每个元素都是石头的编号。例如，button[3][0] 和button[3][1] 表示被第4 个开关控制的石头编号。石头的编号从1 开始。如果button[3][0] = 1 并且button[3][1] = 0，那么这个开关只控制1 号石头。
 - 数组answer 里面是问题的答案。例如，answer[2] = true 表示第3 个开关应该打开。
 - lab1 函数的返回值类型是bool，如果返回true，表示有办法让所有石头同时浮在水上，如果返回false，表示Tom 和Jerry 无法过河了。
+
 假设这些参数的值都是合法的。
+
 lab1 必须使用minisat 完成，minisat.cpp 中有一个示例代码，是求解(¬A∨¬B ∨C)∧(¬A ∨ ¬B ∨ ¬C) ∧ (A ∨ ¬B ∨ C) 的。打开命令行，cd 到minisat.cpp 所在文件夹，输入make example 可以编译运行minisat.cpp。
 完成lab1 后请打开命令行，cd 到代码所在文件夹，输入make run 就可以编译运行代
 码。
