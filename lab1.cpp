@@ -15,7 +15,7 @@ bool lab1(int states[], int n, int button[][2], int m, bool answer[])
     //TODO : your solution here.
     /* assert(0); */
     for (int i = 0; i < m; i++) {
-        if (button[i][1] <= 0 || button[i][1] >= n + 1) {
+        if (button[i][1] <= 0 || button[i][1] >= n ) {
             if (states[button[i][0] - 1] == 1) solver.addClause(~mkLit(variables[button[i][0] - 1]));
             else solver.addClause(~mkLit(variables[button[i][0] - 1]));
             continue;
