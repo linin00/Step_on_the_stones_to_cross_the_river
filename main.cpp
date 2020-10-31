@@ -25,12 +25,12 @@ void input_data()
     scanf("%d %d", &m, &n);
 
 
-    for(i = 0; i<n; ++i)
+    for(i = 0; i < n; ++i)
     {
         scanf("%d", states + i);
     }
 
-    for(i = 0; i<m; ++i)
+    for(i = 0; i < m; ++i)
     {
         int num;
         scanf("%d", &num);
@@ -70,7 +70,7 @@ int main()
 
     int i;
     //address every cases
-    for(i=0; i<iter; ++i)
+    for(i=0; i < iter; ++i)
     {
         //init input data
         input_data();
@@ -82,7 +82,7 @@ int main()
         {
             //if the problem is satisfiable, output the answer
             int j;
-            for(j = 0; j<m; ++j)
+            for(j = 0; j < m; ++j)
                 fprintf(output_fh, "%d ", answer[j]);
         }
         else

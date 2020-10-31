@@ -13,7 +13,17 @@ bool lab1(int states[], int n, int button[][2], int m, bool answer[])
 
 
     //TODO : your solution here.
-    assert(0);
+    /* assert(0); */
+    for (int i = 0; i < n; i++) {
+        if (button[i][1] == 0) 
+            if (states[button[i][0]] == 1) solver.addClause(variables[button[i][0] - 1]);
+            else slover.addClause(~variables[button[i][0] - 1]);
+        else if (button[1] == 1)
+            if (states[button[i][0]] == 1 && states[button[i][1]] == 1) slover.addClause(variables[button[i][0] - 1], variables[button[i][1] - 1]);
+            else if (states[button[i][0]] == 0 && states[button[i][1]] == 0) slover.addClause(~variables[button[i][0] - 1], ~variables[button[i][1] - 1]);
+                else if (states[button[i][0]] == 0 && states[button[i][1]] == 1) slover.addClause(~variables[button[i][0] - 1], variables[button[i][1] - 1]);
+                    else if (states[button[i][0]] == 1 && states[button[i][1]] == 0) slover.addClause(variables[button[i][0] - 1], ~variables[button[i][1] - 1]);
+    }
 
 
     //solve SAT problem
