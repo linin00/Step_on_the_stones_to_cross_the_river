@@ -34,14 +34,15 @@ void input_data()
     {
         int num;
         scanf("%d", &num);
-        if(num == 1)
+        /* if(num == 1)
         {
             scanf("%d", &(button[i][0]) );
         }
         else
         {
             scanf("%d %d", &(button[i][0]), &(button[i][1]) );
-        }
+        } */
+        scanf("%d %d", &(button[i][0]), &(button[i][1]) );
     }
     return;
 }
