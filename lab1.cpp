@@ -26,22 +26,22 @@ bool lab1(int states[], int n, int button[][2], int m, bool answer[])
             else solver.addClause(~mkLit(variables[button[i][1] - 1]));
             continue;
         } */
-            if (states[button[i][0] - 1] == 1 && states[button[i][1] - 1] == 1) {
-                solver.addClause(mkLit(variables[button[i][0] - 1]), mkLit(variables[button[i][1] - 1]));
-                continue;
-            }
-            if (states[button[i][0] - 1] == 0 && states[button[i][1] - 1] == 0) {
-                solver.addClause(~mkLit(variables[button[i][0] - 1]), ~mkLit(variables[button[i][1] - 1]));
-                continue;
-            }
-            if (states[button[i][0] - 1] == 0 && states[button[i][1] - 1] == 1) {
-                solver.addClause(~mkLit(variables[button[i][0] - 1]), mkLit(variables[button[i][1] - 1]));
-                continue;
-            }
-            if (states[button[i][0] - 1] == 1 && states[button[i][1] - 1] == 0) {
-                solver.addClause(mkLit(variables[button[i][0] - 1]), ~mkLit(variables[button[i][1] - 1]));
-                continue;
-            }
+        if (states[button[i][0] - 1] == 1 && states[button[i][1] - 1] == 1) {
+            solver.addClause(mkLit(variables[button[i][0] - 1]), mkLit(variables[button[i][1] - 1]));
+            continue;
+        }
+        if (states[button[i][0] - 1] == 0 && states[button[i][1] - 1] == 0) {
+            solver.addClause(~mkLit(variables[button[i][0] - 1]), ~mkLit(variables[button[i][1] - 1]));
+            continue;
+        }
+        if (states[button[i][0] - 1] == 0 && states[button[i][1] - 1] == 1) {
+            solver.addClause(~mkLit(variables[button[i][0] - 1]), mkLit(variables[button[i][1] - 1]));
+            continue;
+        }
+        if (states[button[i][0] - 1] == 1 && states[button[i][1] - 1] == 0) {
+            solver.addClause(mkLit(variables[button[i][0] - 1]), ~mkLit(variables[button[i][1] - 1]));
+            continue;
+        }
     }
 
 
